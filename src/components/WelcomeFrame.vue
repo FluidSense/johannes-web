@@ -1,6 +1,6 @@
 <template>
 <div>
-    <frame>
+   <frame>
         <single-text></single-text>
     </frame>
 </div>

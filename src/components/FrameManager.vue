@@ -1,6 +1,15 @@
 <template>
     <div>
+        <burger-menu :active="currFrame"/>
+        <!-- THE GIST OF WHAT I WANT TO DO BUT WONT WORK -->
+        <template v-for="item in frames" style="height:100vh;">
+            <component :is="item" :key="item"/>
+            <p :key="item+index">{{ item }}</p>
+        </template>
+        <!-- -->
+        <!-- How to show 1 responsively
         <component @inactive-change="inactive = true" :is="currFrame" />
+        -->
         <chevron-down v-if="inactive"/>
         <p>{{ currFrame }}</p>
     </div>
@@ -11,13 +20,10 @@ import ChevronDown from './Bases/ChevronDown.vue';
 import WelcomeFrame from './WelcomeFrame.vue';
 import IntroductionFrame from './IntroductionFrame.vue';
 import GuidanceFrame from './GuidanceFrame.vue';
+import BurgerMenu from './BurgerMenu.vue';
 import { setTimeout } from 'timers';
 
-const frames = [
-    'welcome-frame',
-    'introduction-frame',
-    'guidance-frame',
-];
+// TODO: Add frames: links, CV
 
 export default {
     data () {
@@ -26,6 +32,11 @@ export default {
             inactive: false,
             waitForScroll: false,
             prevTop: 0,
+            frames: [
+                'welcome-frame',
+                'introduction-frame',
+                'guidance-frame',
+                ],
         }
     },
     computed: {
@@ -37,7 +48,8 @@ export default {
         ChevronDown,
         WelcomeFrame,
         IntroductionFrame,
-        GuidanceFrame
+        GuidanceFrame,
+        BurgerMenu,
     },
     methods: {
         handleScroll (event) {
@@ -51,7 +63,7 @@ export default {
         },
     },
     created () {
-        window.addEventListener('scroll', this.handleScroll);
+        //window.addEventListener('scroll', this.handleScroll);
         setTimeout(() => {this.inactive = true}, 5000);
     },
 }
