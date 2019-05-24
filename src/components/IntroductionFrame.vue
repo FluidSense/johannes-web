@@ -1,6 +1,6 @@
 <template>
     <simple-test-slot>
-        <div>
+        <div id="introduction">
             <overlay-text text="Mitt navn er Johannes Kvamme" />
             <fullscreen-image url="https://www.kvamme.land/Johannes/img/DSC_5310-edit2.jpg"/>
         </div>

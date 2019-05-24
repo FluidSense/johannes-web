@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 v-for="title in titles" :key="title">{{ title }}</h3>
+        <h1 v-for="title in titles" :key="title">{{ title }}</h1>
     </div>
 </template>
 
@@ -14,3 +14,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+div {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    border-right:0.1vw solid black;
+}
+</style>

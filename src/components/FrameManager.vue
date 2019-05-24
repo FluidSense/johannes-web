@@ -1,8 +1,8 @@
 <template>
     <div>
-        <burger-menu :active="currFrame"/>
+        <burger-menu :active="currFrame" :frames="frames"/>
         <template v-for="(item, index) in frames" style="height:100vh;">
-            <component :is="item" :key="item"/>
+            <component :is="item" :key="item" />
             <p :key="item+index">{{ item }}</p>
         </template>
         <!-- How to show 1 responsively
@@ -18,6 +18,7 @@ import WelcomeFrame from './WelcomeFrame.vue';
 import IntroductionFrame from './IntroductionFrame.vue';
 import GuidanceFrame from './GuidanceFrame.vue';
 import CVFrame from './CVFrame.vue';
+import LinksFrame from './LinksFrame';
 import BurgerMenu from './BurgerMenu.vue';
 import { setTimeout } from 'timers';
 
@@ -35,6 +36,7 @@ export default {
                 'introduction-frame',
                 'guidance-frame',
                 'cv-frame',
+                'links-frame',
                 ],
         }
     },
@@ -50,6 +52,7 @@ export default {
         GuidanceFrame,
         BurgerMenu,
         'cv-frame': CVFrame,
+        LinksFrame
     },
     created () {
         //window.addEventListener('scroll', this.handleScroll);
