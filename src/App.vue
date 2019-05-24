@@ -30,6 +30,10 @@ body, html {
     margin:0;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
