@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueScrollTo from 'vue-scrollto';
+import VueWaypoint from 'vue-waypoint';
 
 Vue.config.productionTip = false
 
@@ -16,7 +17,9 @@ Vue.use(VueScrollTo, {
   onCancel: false,
   x: false,
   y: true
-})
+});
+
+Vue.use(VueWaypoint);
 
 new Vue({
   render: h => h(App),
