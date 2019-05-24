@@ -1,0 +1,14 @@
+{
+    "rema": {
+        "title": "Rema 1000",
+        "position": "Medarbeider",
+        "period": "2016-2017",
+        "desc": "Jobb i Rema 1000"
+    },
+    "NTNU-IT": {
+        "title": "NTNU IT",
+        "position": "Teknisk støtte",
+        "period": "2017-2018",
+        "desc": "Orakeltjenesten"
+    }
+}
