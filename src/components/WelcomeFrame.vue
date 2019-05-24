@@ -1,18 +1,18 @@
 <template>
 <div>
-   <frame>
-        <single-text></single-text>
-    </frame>
+   <simple-slot-test>
+       <single-text/>
+   </simple-slot-test>
 </div>
 </template>
 
 <script>
 import SingleText from './Bases/SingleText.vue';
-import Frame from './Bases/Frame.vue';
+import SimpleSlotTest from './Bases/SimpleTestSlot.vue';
 export default {
     components: {
-        Frame,
+        SimpleSlotTest,
         SingleText,
-    }
+    },
 }
 </script>

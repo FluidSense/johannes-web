@@ -1,13 +1,15 @@
 <template>
     <div>
-        <slot></slot>
+        <slot>This is the default slot text</slot>
     </div>
 </template>
 
+<!--
 <script>
 export default {
 }
 </script>
+-->
 
 <style scoped>
 div {
