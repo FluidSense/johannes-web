@@ -1,6 +1,6 @@
 <template>
     <simple-test-slot>
-        <div id="Links">
+        <div>
             <link-column direction="right" :links="even(links)"/>
             <link-column direction="left" :links="odd(links)"/>
         </div>
@@ -35,5 +35,6 @@ export default {
 <style scoped>
 div {
     display: flex;
+    position: relative;
 }
 </style>

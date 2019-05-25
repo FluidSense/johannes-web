@@ -21,5 +21,6 @@ div {
     flex-direction: column;
     align-content: space-around;
     border-right:0.1vw solid black;
+    position: static;
 }
 </style>

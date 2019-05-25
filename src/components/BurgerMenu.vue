@@ -2,7 +2,7 @@
     <div class="menu" :class="menuDisplay">
         <button @click="toggleMenu"><span class="material-icons" id="burger-button">menu</span></button>
         <div :class="menuList">
-            <button v-for="(frame, index) in frames" :key="frame+index" v-scroll-to="frame">{{ frame }}</button>
+            <button v-for="(frame, index) in frames" :key="frame+index" v-scroll-to="`#${frame}`">{{ frame }}</button>
             <button v-scroll-to="'#Start'">Start</button>
             <button v-scroll-to="'#CV'">CV</button>
             <button v-scroll-to="'#Links'">Links</button>
@@ -38,6 +38,10 @@ export default {
         active: {
             type: String,
             required: true,
+        },
+        frames: {
+            type: Array,
+            required: false,
         }
     }
 }

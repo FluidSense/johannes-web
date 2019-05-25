@@ -1,6 +1,6 @@
 <template>
 <simple-test-slot>
-    <div id="CV">
+    <div>
         <scroll-title-column :titles="titles"/>
         <scroll-column>
             <cv-entry v-for="entry in cv" :key="entry.title" :item="entry"/>
@@ -43,6 +43,7 @@ export default {
 #CV {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 </style>
 

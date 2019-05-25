@@ -2,12 +2,15 @@
     <div>
         <burger-menu :active="currFrame" :frames="frames"/>
         <template v-for="(item, index) in frames" style="height:100vh;">
-            <component :is="item" :key="item" />
-            <p :key="item+index">{{ item }}</p>
+            <waypoint-frame
+                @entered-frame="enterFrame" 
+                @initiate-fade="initiateFade = true"
+                :framename="item"
+                :frameindex="index"
+                :key="item+index" 
+            />
         </template>
-        <!-- How to show 1 responsively
-        <component @inactive-change="inactive = true" :is="currFrame" />
-        -->
+        <component :is="currFrame" :class="conditionalFade"/>
         <chevron-down v-if="inactive"/>
     </div>
 </template>
@@ -20,9 +23,19 @@ import GuidanceFrame from './GuidanceFrame.vue';
 import CVFrame from './CVFrame.vue';
 import LinksFrame from './LinksFrame';
 import BurgerMenu from './BurgerMenu.vue';
+import WaypointFrame from './Bases/WaypointFrame.vue';
 import { setTimeout } from 'timers';
 
-// TODO: Add frames: links, CV
+/* 
+
+Ok, nyeste idé: Hva om et div er et waypoint, like stort som skjermen.
+Div-en har en waypoint-callback som sier ifra hvilken frame som skal vises.
+Frame Manager får da beskjed av Waypoint av hva CurrFrame skal være.
+Med en margin-bottom på en del, så vil man kunne trigge GOING_OUT for å starte fade-out animation også.
+CurrFrame vil alltid være fixed position.
+
+*/
+
 
 export default {
     data () {
@@ -31,6 +44,7 @@ export default {
             inactive: false,
             waitForScroll: false,
             prevTop: 0,
+            initiateFade: false,
             frames: [
                 'welcome-frame',
                 'introduction-frame',
@@ -44,6 +58,9 @@ export default {
         currFrame: function () {
             return this.frames[this.frameIndex];
         },
+        conditionalFade () {
+            return this.initiateFade ? 'fader' : '';
+        }
     },
     components: {
         ChevronDown,
@@ -52,7 +69,14 @@ export default {
         GuidanceFrame,
         BurgerMenu,
         'cv-frame': CVFrame,
-        LinksFrame
+        LinksFrame,
+        WaypointFrame,
+    },
+    methods: {
+        enterFrame (frameindex) {
+            this.initiateFade = false;
+            this.frameIndex = frameindex;
+        }
     },
     created () {
         //window.addEventListener('scroll', this.handleScroll);

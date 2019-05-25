@@ -26,8 +26,8 @@ div {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size:10vw;
-    animation: fadeIn;
-    animation-duration: 3s;
+    opacity: 0;
+    animation: fadeIn 3s;
 }
 
 </style>
