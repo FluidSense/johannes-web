@@ -34,8 +34,16 @@ body, html {
   visibility: hidden;
 }
 
-.fader {
-  animation: fadeOut 3s;
+.fadeable{
+  will-change: opacity;
+}
+.fade-out {
+  opacity: 0;
+  animation: fadeOut 2s;
+}
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 2s;
 }
 
 @keyframes fadeOut {
