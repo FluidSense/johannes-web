@@ -1,12 +1,12 @@
 {
     "github": {
         "title":"GitHub",
-        "url":"https://",
-        "icon":"@/assets/svg/github.svg"
+        "url":"https://github.com/FluidSense",
+        "icon":"https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
     },
     "linkedin": {
         "title": "LinkedIn",
-        "url":"https://www.linkedin.com/johanneskvamme",
-        "icon":""
+        "url":"https://www.linkedin.com/in/johannes-kvamme",
+        "icon":"https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
     }
 }

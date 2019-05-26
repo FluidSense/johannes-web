@@ -1,14 +1,56 @@
 {
-    "rema": {
-        "title": "Rema 1000",
-        "position": "Medarbeider",
-        "period": "2016-2017",
-        "desc": "Jobb i Rema 1000"
+    "work": {
+        "rema": {
+            "organisation": "Rema 1000",
+            "location": "Asker",
+            "section":"Gullhella",
+            "position": "Medarbeider",
+            "period": "2016-2017",
+            "desc": "Jobb i Rema 1000"
+        },
+        "NTNU-IT": {
+            "organisation": "NTNU IT",
+            "location": "Trondheim",
+            "section": "Orakeltjenesten",
+            "position": "Studentorakel",
+            "period": "2017-2018",
+            "desc": "Deltidsstilling ved siden avstudiet som IT-support for studenter, samt faggruppe utvikling m/ Django og postgresql."
+        },
+        "Telenor Capture": {
+            "organisation": "Telenor Capture",
+            "location": "Trondheim",
+            "section":"Summer intern",
+            "position": "Frontendutvikler",
+            "period": "Juni 2018 - August 2018",
+            "desc": "React m/ Redux, Typescript."
+        }
     },
-    "NTNU-IT": {
-        "title": "NTNU IT",
-        "position": "Teknisk støtte",
-        "period": "2017-2018",
-        "desc": "Orakeltjenesten"
+    "study": {
+        "NTNU": {
+            "organisation": "NTNU",
+            "section": "Informatikk",
+            "position": "Bachelor",
+            "period": "August 2016 - Pågående",
+            "location": "Trondheim",
+            "desc": "Informatikkstudiet gir alt fra praktiske ferdigheter i programmering og bruk av datamaskiner, til kunnskap om hvordan datasystemer skal utvikles og tas i bruk for best å kunne tilfredsstille brukeres og bedrifters behov."
+        }
+    },
+    "appointments": {
+        "Arrangementskomiteen": {
+            "organisation": "Online",
+            "section":"Arrangementskomiteen",
+            "location": "Trondheim",
+            "period": "September 2016 - Juni 2019",
+            "position": "leder, medlem",
+            "desc":"Arrangerer sosiale arrangementer  og aktiviteter for linjeforeningens medlemmer."
+        },
+        "Velkomstkomiteen": {
+            "organisation": "Online",
+            "section": "Velkomstkomiteen",
+            "location": "Trondheim",
+            "period": "April 2017 - August 2017",
+            "position": "Nestleder",
+            "desc":"Ansvarlig for linjeforeningens fadderuker og mottakelse av nye studenter."
+        }
     }
 }
