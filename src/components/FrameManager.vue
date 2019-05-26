@@ -10,7 +10,7 @@
                 :key="item+index" 
             />
         </template>
-        <component :is="currFrame" :class="conditionalFade"/>
+        <component :is="currFrame" class="fadeable" :class="conditionalFade"/>
         <chevron-down v-if="inactive"/>
     </div>
 </template>
@@ -59,7 +59,7 @@ export default {
             return this.frames[this.frameIndex];
         },
         conditionalFade () {
-            return this.initiateFade ? 'fader' : '';
+            return this.initiateFade ? 'fade-out' : 'fade-in';
         }
     },
     components: {

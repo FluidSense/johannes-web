@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="frame">
         <slot></slot>
     </div>
 </template>
 
 <style scoped>
-div {
+.frame {
     position: fixed;
     top: 0;
     width: 100vw;

@@ -27,8 +27,6 @@ h1 {
     color:azure;
     font-family: Arial, Helvetica, sans-serif;
     font-size:10vw;
-    animation: fadeIn;
-    animation-duration: 3s;
 }
 
 </style>

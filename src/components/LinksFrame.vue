@@ -1,6 +1,6 @@
 <template>
     <simple-test-slot>
-        <div>
+        <div id="link-frame">
             <link-column direction="right" :links="even(links)"/>
             <link-column direction="left" :links="odd(links)"/>
         </div>
@@ -33,8 +33,9 @@ export default {
 </script>
 
 <style scoped>
-div {
-    display: flex;
-    position: relative;
+#link-frame {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
 }
 </style>

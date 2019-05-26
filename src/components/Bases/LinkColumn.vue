@@ -1,6 +1,6 @@
 <template>
-    <div :class="dirClass">
-        <external-link v-for="(item, index) in links" :key="index" :link="item"/>
+    <div class="link-col" :class="colDirClass">
+        <external-link v-for="(item, index) in links" :key="index" :link="item" :class="entryDirClass"/>
     </div>
 </template>
 
@@ -18,8 +18,11 @@ export default {
         }
     },
     computed: {
-        dirClass () {
+        colDirClass () {
             return this.direction === "left" ? "links-left" : "links-right";
+        },
+        entryDirClass () {
+            return this.direction === "left" ? "external-link-left" : "external-link-right";
         }
     },
     components: {
@@ -30,11 +33,10 @@ export default {
 
 
 <style scoped>
-div {
-    width: 45vw;
+.link-col {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .links-left {

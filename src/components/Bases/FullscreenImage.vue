@@ -14,8 +14,6 @@ export default {
 <style scoped>
 img {
     width: 100%;
-    animation: fadeIn;
-    animation-duration: 3s;
 }
 </style>
 
