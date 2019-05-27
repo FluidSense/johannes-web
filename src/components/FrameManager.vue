@@ -1,6 +1,6 @@
 <template>
     <div>
-        <burger-menu :active="currFrame" :frames="frames"/>
+        <burger-menu :active="currFrame" :menuOptions="frames" :translation="burgerMenuTranslation"/>
         <template v-for="(item, index) in frames" style="height:100vh;">
             <waypoint-frame
                 @entered-frame="enterFrame" 
@@ -24,8 +24,8 @@ import CVFrame from './CVFrame.vue';
 import LinksFrame from './LinksFrame';
 import BurgerMenu from './BurgerMenu.vue';
 import WaypointFrame from './Bases/WaypointFrame.vue';
+import ProjectFrame from './ProjectFrame.vue';
 import { setTimeout } from 'timers';
-
 /* 
 
 Ok, nyeste idé: Hva om et div er et waypoint, like stort som skjermen.
@@ -51,7 +51,16 @@ export default {
                 'guidance-frame',
                 'cv-frame',
                 'links-frame',
+                'project-frame'
                 ],
+            burgerMenuTranslation: {
+                'welcome-frame': 'Start',
+                'introduction-frame': 'Introduksjon',
+                'guidance-frame': 'Veiledning',
+                'cv-frame':'CV',
+                'links-frame': 'Lenker',
+                'project-frame': 'Prosjekter'
+            }
         }
     },
     computed: {
@@ -71,6 +80,7 @@ export default {
         'cv-frame': CVFrame,
         LinksFrame,
         WaypointFrame,
+        ProjectFrame
     },
     methods: {
         enterFrame (frameindex) {
