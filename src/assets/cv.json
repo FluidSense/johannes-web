@@ -1,20 +1,12 @@
 {
     "work": {
-        "rema": {
-            "organisation": "Rema 1000",
-            "location": "Asker",
-            "section":"Gullhella",
-            "position": "Medarbeider",
-            "period": "2016-2017",
-            "desc": "Jobb i Rema 1000"
-        },
         "NTNU-IT": {
             "organisation": "NTNU IT",
             "location": "Trondheim",
             "section": "Orakeltjenesten",
             "position": "Studentorakel",
             "period": "2017-2018",
-            "desc": "Deltidsstilling ved siden avstudiet som IT-support for studenter, samt faggruppe utvikling m/ Django og postgresql."
+            "desc": "Deltidsstilling ved siden av studiet som IT-support for studenter, samt faggruppe utvikling m/ Django og postgresql."
         },
         "Telenor Capture": {
             "organisation": "Telenor Capture",

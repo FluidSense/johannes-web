@@ -1,0 +1,17 @@
+{
+    "SeatMaster": {
+        "title": "SeatMaster",
+        "url": "https://api.github.com/repos/FluidSense/SeatMaster/branches/master",
+        "desc": "SeatMaster ble utviklet i forbindelse med NTNU-faget IT2902..."
+    },
+    "johannesweb": {
+        "title": "JohannesWeb",
+        "url":"#",
+        "desc":"Denne siden."
+    },
+    "nibble-cli": {
+        "title": "Nibble CLI",
+        "url": "#",
+        "desc": "Nibble CLI er et command-line interface for ..."
+    }
+}
