@@ -46,18 +46,29 @@ export default {
 
 <style scoped>
 .cv-entry {
-    min-height: 33vh;
-    margin:2em 1em 0em 1em;
+    margin:9vh 1em 0em 1em;
 }
 .cv-title {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
-    
+   .cv-title {
+       flex-direction: column;
+   }
+   .cv-title > p {
+       margin-top:0.1em;
+       margin-bottom: 0.1em;
+   }
+   .cv-title > h3 {
+       margin-bottom: 0.2em;
+   }
+   .cv-title > p:first-of-type {
+       display: none;
+   }
 }
 </style>

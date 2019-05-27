@@ -8,7 +8,7 @@
 
 <script>
 import SingleText from './Bases/SingleText.vue';
-import SimpleSlotTest from './Bases/SimpleTestSlot.vue';
+import SimpleSlotTest from './Bases/ContentFrame.vue';
 export default {
     components: {
         SimpleSlotTest,

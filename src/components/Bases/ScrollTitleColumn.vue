@@ -45,9 +45,10 @@ div {
         border: 0;
         width: 100vw;
         justify-content: space-evenly;
+        align-self: end;
     }
     h1 {
-        font-size: 100%;
+        font-size: 130%;
     }
 }
 </style>

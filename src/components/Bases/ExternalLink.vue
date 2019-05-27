@@ -10,7 +10,6 @@
 export default {
     props: {
         link: {
-            title: String,
             linkObject: {
                 title: {
                     type: String,

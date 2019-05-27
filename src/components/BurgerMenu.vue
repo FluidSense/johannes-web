@@ -1,11 +1,8 @@
 <template>
     <div class="menu" :class="menuDisplay">
-        <button @click="toggleMenu"><span class="material-icons" id="burger-button">menu</span></button>
+        <button @click="toggleMenu"><span class="material-icons" id="burger-button">{{menuIcon}}</span></button>
         <div :class="menuList">
-            <button v-for="(frame, index) in frames" :key="frame+index" v-scroll-to="`#${frame}`">{{ frame }}</button>
-            <button v-scroll-to="'#Start'">Start</button>
-            <button v-scroll-to="'#CV'">CV</button>
-            <button v-scroll-to="'#Links'">Links</button>
+            <button v-for="(frame, index) in menuOptions" :key="frame+index" v-scroll-to="`#${frame}`">{{ menuTranslation(frame) }}</button>
         </div>
     </div>
 </template>
@@ -26,12 +23,18 @@ export default {
         },
         scrollDest(string) {
             return '#'+string;
+        },
+        menuIcon() {
+            return this.menuHidden ? "menu" : "close";
         }
 
     },
     methods: {
         toggleMenu() {
             this.menuHidden = !this.menuHidden;
+        },
+        menuTranslation(option) {
+            return this.translation[option];
         }
     },
     props: {
@@ -39,9 +42,16 @@ export default {
             type: String,
             required: true,
         },
-        frames: {
+        menuOptions: {
             type: Array,
+            required: true,
+        },
+        translation: {
+            type: Object,
             required: false,
+            default: function () {
+                return this.menuOptions.reduce((acc, val) => {acc[val] = val; return acc;}, {});
+            }
         }
     }
 }
@@ -51,7 +61,7 @@ export default {
 .menu {
     position: fixed;
     z-index: 1;
-    padding: 1em 1em 2em 1em;
+    padding-bottom: 10vh;
 }
 .menu-hidden {
     background-color: transparent;
