@@ -1,29 +1,7 @@
 # johannesweb
 
-## Project setup
-```
-npm install
-```
+Dette er et prosjekt for å leke med og teste ut Vue.js.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Resultatet er en ![hjemmeside](https://johannes.kvamme.land) for meg, min CV og litt av mine prosjekter.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Jeg ønsker alltid å forbedre meg, så tilbakemeldinger, forbedringspotensiale, issues og PRs mottas med takk! 🎉
